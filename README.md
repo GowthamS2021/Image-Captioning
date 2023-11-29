@@ -12,3 +12,6 @@ In this project we made multiple models for Image Caption Generation.For detaile
 All the codes are in "model" folder,models made before presentation(with BLEU score) are in "pre_presentation" folder and the ones made after (with METEOR score) are in the models folder.
 All the images are in "pics" folder.The codes include pre-saved outputs generated from prior runs.There are 6 codes in post presentation,each with a different encoder decoder pair.
 We used 2 encoders(VGG19 ,ResNet152) and 3 decoders(LSTM,LSTMmodified,LSTM_with_attention)
+
+# Interpretation of outputs
+In each of the codes we wrote a similar train() function which trains the model using cross entropy loss and adam optimiser for 10 epochs,this function prints the loss and perplexity while training(on the train set) and also prints BLEU and METEOR scores after validation(using a validation set) after each epoch.After training the model we can observe the models image captioning capabilities using the function generate_captions_for_random_imag() which takes in the trained model as input and prints one random image(from validation set) and prints its generated caption when we send that image as input to our model.Our code has pre ran outputs for reference.
